@@ -54,7 +54,7 @@ This approach promotes a more efficient and equitable energy market by enabling 
 
 The smart contract has been deployed on the Ethereum Sepolia chain. You can view the verified contract code and address at the following link:
 
-- **Contract Address**: [0x54e0986bf4c9a3ae4061825c42734d6eccfe3f8b](https://sepolia.etherscan.io/address/0x54e0986bf4c9a3ae4061825c42734d6eccfe3f8b#code)
+- **Contract Address**: [0xa904b4ae72b0e95cb59817abfab733a5ccb7820f](https://testnet.avascan.info/blockchain/all/address/0xa904b4ae72b0e95cb59817abfab733a5ccb7820f/transactions)
 
 ## Getting Started
 
