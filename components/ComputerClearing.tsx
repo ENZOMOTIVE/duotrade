@@ -46,16 +46,24 @@ export function ComputeClearing({ contract, account }: ComputeClearingProps) {
       setClearingQuantity(ethers.utils.formatEther(quantity))
       
       alert('Market cleared successfully!')
-    } catch (error) {
-      console.error('Failed to compute clearing:', error)
-      if (error.code === 'UNPREDICTABLE_GAS_LIMIT') {
-        alert('Failed to estimate gas. The transaction may fail.')
-      } else if (error.code === 'INSUFFICIENT_FUNDS') {
-        alert('Insufficient funds to perform this operation.')
-      } else {
-        alert('Failed to compute clearing. Please check the console for more details.')
+    }catch (error) {
+        console.error('Failed to compute clearing:', error);
+      
+        // Narrowing the error type
+        if (typeof error === 'object' && error !== null && 'code' in error) {
+          const err = error as { code: string }; // Type assertion
+          if (err.code === 'UNPREDICTABLE_GAS_LIMIT') {
+            alert('Failed to estimate gas. The transaction may fail.');
+          } else if (err.code === 'INSUFFICIENT_FUNDS') {
+            alert('Insufficient funds to perform this operation.');
+          } else {
+            alert('Failed to compute clearing. Please check the console for more details.');
+          }
+        } else {
+          alert('An unexpected error occurred.');
+        }
       }
-    }
+      
     setIsComputing(false)
   }
 
