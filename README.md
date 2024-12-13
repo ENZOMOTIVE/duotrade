@@ -1,4 +1,4 @@
-# Energy Trading System Using Blockchain
+# Duotrade Energy Trading System Using AVAX Blockchain
 
 This repository contains the Solidity implementation of the `Energy Trading System using Blockchain`, a peer-to-peer blockchain-based energy trading system. The system facilitates energy trading through a periodic double auction mechanism, enabling participants to buy and sell energy directly without intermediaries.
 
